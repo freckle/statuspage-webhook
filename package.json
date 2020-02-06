@@ -1,0 +1,23 @@
+{
+  "name": "statuspage-webhook",
+  "version": "1.0.0",
+  "description": "Webhook-based automation for StatusPage Component status.",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^1.19.1",
+    "serverless": "^1.63.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1"
+  },
+  "scripts": {
+    "test": "mocha \"src/**/*-test.js\"",
+    "test.watch": "mocha \"src/**/*-test.js\" --watch",
+    "deploy": "serverless deploy",
+    "deploy.prod": "serverless deploy --stage prod",
+    "invoke.up": "serverless invoke -f components -p mocks/component-up.json",
+    "invoke.down": "serverless invoke -f components -p mocks/component-down.json"
+  },
+  "author": "Freckle Engineering",
+  "license": "MIT"
+}

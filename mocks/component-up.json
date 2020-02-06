@@ -1,0 +1,109 @@
+{
+  "resource": "/components",
+  "path": "/components",
+  "httpMethod": "POST",
+  "headers": {
+    "Accept": "*/*",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "US",
+    "content-type": "application/x-www-form-urlencoded",
+    "Host": "...",
+    "User-Agent": "...",
+    "Via": "...",
+    "X-Amz-Cf-Id": "...",
+    "X-Amzn-Trace-Id": "...",
+    "X-Forwarded-For": "...",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "*/*"
+    ],
+    "CloudFront-Forwarded-Proto": [
+      "https"
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      "true"
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      "false"
+    ],
+    "CloudFront-Viewer-Country": [
+      "US"
+    ],
+    "content-type": [
+      "..."
+    ],
+    "Host": [
+      "..."
+    ],
+    "User-Agent": [
+      "..."
+    ],
+    "Via": [
+      "..."
+    ],
+    "X-Amz-Cf-Id": [
+      "..."
+    ],
+    "X-Amzn-Trace-Id": [
+      "..."
+    ],
+    "X-Forwarded-For": [
+      "..."
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "uby2c6",
+    "resourcePath": "/components",
+    "httpMethod": "POST",
+    "extendedRequestId": "...",
+    "requestTime": "...",
+    "path": "/prod/components",
+    "accountId": "...",
+    "protocol": "HTTP/1.1",
+    "stage": "...",
+    "domainPrefix": "...",
+    "requestTimeEpoch": 1581005654289,
+    "requestId": "...",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "...",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "...",
+      "user": null
+    },
+    "domainName": "...",
+    "apiId": "..."
+  },
+  "body": "{\"message\": \"%%% @webhooks-statuspage-zap UP Blah blah blah... %%%\",\"tags\": \"foo:bar,statuspage-component-email:component_82804938-8678-43c8-92ac-92ac28940d07_notifications.statuspage.io,baz:bat\"}",
+  "isBase64Encoded": false
+}

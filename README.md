@@ -26,9 +26,6 @@ problem.
 
 ## Deployment
 
-```console
-./node_modules/.bin/serverless deploy
-```
 
 ### Pre-requisites
 
@@ -39,14 +36,11 @@ problem.
 [serverless]: https://serverless.com/
 [verification]: https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html
 
-### Configuration
+### Deploy
 
-The Lambda accepts the following configuration points via environment:
-
-- `FROM_EMAIL`: the From address for automation emails
-- `COMPONENT_EMAIL_TAG`: the tag key where we'll find the component email
-
-These can be customized in `package.json`
+```console
+./node_modules/.bin/serverless deploy
+```
 
 ## API
 
@@ -88,17 +82,41 @@ it is, this transformation should not be harmful -- but FYI anyway.
 
 ## Testing
 
-To deploy to development stage and invoke using a mock event:
+To run unit tests:
+
+```
+npm run test
+```
+
+(There's also `npm run test.watch`.)
+
+To deploy to development stage and invoke using a mock UP event:
 
 ```console
-% node_modules/.bin/serverless deploy
-% node_modules/.bin/serverless invoke -f components -p mocks/component-up.json
+% npm run deploy
+% npm run invoke.up
 {
     "statusCode": 200,
     "headers": {},
     "body": "Updated component+82804938-8678-43c8-92ac-92ac28940d07@notifications.statuspage.io to UP.\n"
 }
 ```
+
+## Release
+
+- Update version in `package.json`
+
+- Deploy to production stage
+
+  ```console
+  npm run deploy.prod
+  ```
+
+- Tag in Git
+
+  ```console
+  git tag -s -m vX.Y.Z vX.Y.Z
+  ```
 
 ---
 
