@@ -26,7 +26,6 @@ problem.
 
 ## Deployment
 
-
 ### Pre-requisites
 
 - A (non-global) [Serverless][] installation: `npm install serverless`
@@ -78,7 +77,32 @@ it is, this transformation should not be harmful -- but FYI anyway.
 
 ## Usage with DataDog
 
-*TODO*
+1. Tag your Monitor with the Component Automation address
+
+   ```
+   statuspage-component-email:component+{...}@notifications.statuspage.io
+   ```
+
+1. Add a Webhooks Integration
+
+   - **URL**: your Serverless application's endpoint
+   - **Payload**:
+
+     ```json
+     {
+       "message": "$EVENT_MSG",
+       "tags": "$TAGS"
+     }
+     ```
+
+1. Update your Monitor to notify the Webhook integration with UP or DOWN
+
+   ```
+   @webhook-xyz
+
+   {{#is_alert}}DOWN{{/is_alert}}
+   {{#is_recovery}}UP{{/is_recovery}}
+   ```
 
 ## Testing
 
