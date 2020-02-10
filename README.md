@@ -27,7 +27,7 @@ problem.
 ## Getting Started
 
 ```
-npm install
+yarn
 ```
 
 If you're a Freckler...
@@ -51,14 +51,14 @@ If you're not a Freckler...
 To run unit tests:
 
 ```
-npm run test
+yarn test
 ```
 
 To deploy the `dev` stage and test it using a mock UP event:
 
 ```console
-% npm run deploy
-% npm run invoke.up
+% yarn run deploy
+% yarn run invoke.up
 {
     "statusCode": 200,
     "headers": {},
@@ -73,7 +73,7 @@ To deploy the `dev` stage and test it using a mock UP event:
 - Deploy the `prod` stage
 
   ```console
-  npm run deploy.prod
+  yarn run deploy.prod
   ```
 
 - Tag in Git
