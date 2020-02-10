@@ -8,11 +8,11 @@
     "serverless": "^1.63.0"
   },
   "devDependencies": {
-    "mocha": "^7.0.1"
+    "jest": "^25.1.0"
   },
   "scripts": {
-    "test": "mocha \"src/**/*-test.js\"",
-    "test.watch": "mocha \"src/**/*-test.js\" --watch",
+    "test": "jest",
+    "test.watch": "jest --watch",
     "deploy": "serverless deploy",
     "deploy.prod": "serverless deploy --stage prod",
     "invoke.up": "serverless invoke -f components -p mocks/component-up.json",
