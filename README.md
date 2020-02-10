@@ -44,7 +44,8 @@ If you're not a Freckler...
 - Ensure AWS is properly configured
 - Change `FROM_ADDRESS` in the code and [verify it in SES][verification]
 
-[verification]: https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html
+[verification]:
+  https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html
 
 ## Testing
 
